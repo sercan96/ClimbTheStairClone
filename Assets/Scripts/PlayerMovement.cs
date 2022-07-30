@@ -7,10 +7,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] public float PlayerRot;
     [SerializeField] private Player _player;
-    public float Speed;
     private float _stairsRotY;
     private float _stairPosY;
-    private float _counter;
+    public static float Counter;
 
     void OnEnable()
     {
@@ -23,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Start()
     {
-        _counter = 0.1f; // speed görevi yapacak.
+        Counter = Upgrades.StartCounter; // speed görevi yapacak.
     }
     void Update()
     {
@@ -42,9 +41,9 @@ public class PlayerMovement : MonoBehaviour
     
     private bool Timer()
     {
-        if (_counter >= 0)
+        if (Counter >= 0)
         {
-            _counter -= Time.deltaTime;
+            Counter -= Time.deltaTime;
             return false;
         }
         return true;
@@ -55,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.position = Climb(0.2f);
         transform.rotation = PlayerDirection(PlayerRot);
-        _counter = 0.1f;
+        Counter = Upgrades.StartCounter;
     }
     
     

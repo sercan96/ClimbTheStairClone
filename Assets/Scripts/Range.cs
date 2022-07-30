@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class Range : MonoBehaviour
 {
-    public GameObject Canvas;
+    public GameObject MyRangeCanvas;
     public Text CylinderScoreText;
     private float _score;
-    
     private float _riseValueY;
+    private float _riseMyRange;
 
     void OnEnable()
     {
@@ -25,24 +25,24 @@ public class Range : MonoBehaviour
 
     void Start()
     {
-        Canvas = GameObject.Find("MyRange");
+        MyRangeCanvas = GameObject.Find("MyRange");
         CylinderScoreText = GameObject.Find("MyScore").GetComponent<Text>();
     }
-
-    void Update()
-    {
-        Canvas.transform.position = transform.position;
-    }
-
+    
     public void IncreaseCylinderLength()
     {
-        transform.localScale = new Vector3(transform.localScale.x,_riseValueY,transform.localScale.z);
         _riseValueY += 0.2f;
+        _riseMyRange = 0.2f;
+        
+        transform.localScale = new Vector3(transform.localScale.x,_riseValueY,transform.localScale.z);
+        
+        MyRangeCanvas.transform.position = new Vector3(MyRangeCanvas.transform.position.x, 
+            MyRangeCanvas.transform.position.y + _riseMyRange, MyRangeCanvas.transform.position.z);
     }
 
     public void IncreaseCylinderScore()
     {
         _score += 0.2f;
-        CylinderScoreText.text = _score.ToString(CultureInfo.InvariantCulture);
+        CylinderScoreText.text = _score + " m";
     }
 }

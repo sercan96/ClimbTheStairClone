@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private AudioClip _audioClip;
-    private Animator _animator;
+    public static Animator Animator;
     
     void OnEnable()
     {
@@ -20,18 +20,18 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
+        Animator = GetComponent<Animator>();
     }
     
     public void RunAnimation()
     {
-        _animator.SetBool("isRun",true);
-        _animator.SetBool("isIdle",false);
+        Animator.SetBool("isRun",true);
+        Animator.SetBool("isIdle",false);
     }  
     public void IdleAnimation()
     {
-        _animator.SetBool("isRun",false);
-        _animator.SetBool("isIdle",true);
+        Animator.SetBool("isRun",false);
+        Animator.SetBool("isIdle",true);
     }
     
     public void PlayPlayerSound()
