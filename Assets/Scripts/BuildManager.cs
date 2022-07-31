@@ -25,20 +25,13 @@ public class BuildManager : MonoBehaviour
     {
         EventManager.MousePressEvent -= SpawnStairs;
     }
-
-
+    
     void Start()
     {
         Instance = this;
         _stairPosY= 0.2f;
         SpawnCylinder();
     }
-    
-
-    // public void BuildStair()
-    // {
-    //     Instantiate(Stairprefab, StairsTransform(0.2f),Direction(15f));
-    // }
     
     public Vector3 StairsTransform(float posY)
     {

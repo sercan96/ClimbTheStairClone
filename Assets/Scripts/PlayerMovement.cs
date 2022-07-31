@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     [SerializeField] public float PlayerRot;
     [SerializeField] private Player _player;
+    
+    public static float Counter;
+    
     private float _stairsRotY;
     private float _stairPosY;
-    public static float Counter;
-
+    
     void OnEnable()
     {
         EventManager.MousePressEvent += PlayerTransformSituation;
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _player.IdleAnimation();
+            _player.RaiseStamine();
         }
     }
     

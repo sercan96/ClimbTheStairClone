@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager _instance;
+    public AudioSource AudioSource;
     public static AudioManager Instance
     {
         get => _instance;
     }
-    
-    public AudioSource AudioSource;
-    
+
+    private static AudioManager _instance;
     private bool sound = true;
     
     void Start()
@@ -28,7 +27,6 @@ public class AudioManager : MonoBehaviour
             //DontDestroyOnLoad(_instance); // instance referanslı objeyi sahne yenilendiğinde yok etme
         }
     }
-    
     
     public void PlayClipFx(AudioClip audioClip,float volume)
     {

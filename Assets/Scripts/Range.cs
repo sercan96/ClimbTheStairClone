@@ -8,6 +8,7 @@ public class Range : MonoBehaviour
 {
     public GameObject MyRangeCanvas;
     public Text CylinderScoreText;
+    
     private float _score;
     private float _riseValueY;
     private float _riseMyRange;

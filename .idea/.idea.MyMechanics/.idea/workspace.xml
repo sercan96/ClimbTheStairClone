@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="37085a10-ef66-4159-8ed7-5f870569c9f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMechanics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMechanics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Cylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Cylinder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MyRange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/MyRange.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Player.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Player.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Player.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/SkyBox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/SkyBox.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Range.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Range.cs" afterDir="false" />
@@ -57,7 +63,8 @@
       <workItem from="1659093917141" duration="13558000" />
       <workItem from="1659124034498" duration="11377000" />
       <workItem from="1659166844669" duration="1608000" />
-      <workItem from="1659215692792" duration="5610000" />
+      <workItem from="1659215692792" duration="6007000" />
+      <workItem from="1659297947525" duration="11141000" />
     </task>
     <servers />
   </component>
