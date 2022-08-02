@@ -24,7 +24,11 @@ public class CanvasUI : MonoBehaviour
 
     void Update()
     {
-        if (GameActive) return;
+        if (GameActive)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            return;
+        }
 
         if (Input.GetMouseButtonDown(0) && !GameUı.IgnoreUI())
         {

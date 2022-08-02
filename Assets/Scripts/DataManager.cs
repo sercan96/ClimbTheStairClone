@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DataManager : MonoBehaviour
 {
     public CanvasUI CanvasUı;
     public static DataManager Instance;
     public int Money = 100;
+
 
 
     void OnEnable()
@@ -31,7 +33,7 @@ public class DataManager : MonoBehaviour
         CanvasUı.MyMoneyTxt.text = Money.ToString();
         SaveMoney();
     }
-    public void MyMoney(int amount)
+    public void MainMoney(int amount)
     {
         if (Money <= amount) return;
         Money -= amount;

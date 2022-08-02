@@ -30,7 +30,7 @@ public class BuildManager : MonoBehaviour
     {
         Instance = this;
         _stairPosY= 0.2f;
-        SpawnCylinder();
+        // SpawnMainCylinder();
     }
     
     public Vector3 StairsTransform(float posY)
@@ -51,10 +51,10 @@ public class BuildManager : MonoBehaviour
     }
     
     
-    public void SpawnCylinder()
-    {
-        Instantiate(SpawnCylinderObj, CylinderRange.position, CylinderRange.rotation,StairPos.transform);
-    }
+    // public void SpawnMainCylinder()
+    // {
+    //     Instantiate(SpawnCylinderObj, CylinderRange.position, CylinderRange.rotation,StairPos.transform);
+    // }
     
    
 }

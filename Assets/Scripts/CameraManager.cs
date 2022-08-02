@@ -10,7 +10,11 @@ public class CameraManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();
+        if (Target != null) // obje varsa
+        {
+            Move();
+        }
+
     }
 
     void Move()
