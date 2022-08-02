@@ -3,18 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="37085a10-ef66-4159-8ed7-5f870569c9f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMechanics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMechanics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Player.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BizulkaProduction/Stickman/Materials/Player.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/SkyBox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/SkyBox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Range.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Range.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +23,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/de1f8ef4975b4eacbeb0accc1b22c9b02a000/fe/11662ffe/Ease.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -65,11 +60,24 @@
       <workItem from="1659166844669" duration="1608000" />
       <workItem from="1659215692792" duration="6007000" />
       <workItem from="1659297947525" duration="11141000" />
+      <workItem from="1659354594691" duration="18202000" />
+      <workItem from="1659440245867" duration="2513000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

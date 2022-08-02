@@ -27,16 +27,21 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        if (!CanvasUI.Instance.GameActive)
+        {
+            Player.IdleAnimation();
+            return;
+        }
+        
         if (Input.GetMouseButton(0))
         {
-            if (!Timer()) return;
-            
-            EventManager.MousePressEvent.Invoke();
+            if (Timer())
+                EventManager.MousePressEvent.Invoke();
         }
         else
         {
-            _player.IdleAnimation();
-            _player.RaiseStamine();
+            Player.IdleAnimation();
+            _player.RaiseStamina();
         }
     }
     

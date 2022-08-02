@@ -10,83 +10,100 @@ public class Player : MonoBehaviour
     [SerializeField] private Color[] _playerColor;
     
     public static Animator Animator;
-    public float Stamine;
+    public static float Stamina;
+    private int StartStamina = 10;
+    public static int MaxStaminaValue = 10;
 
     private Material _playerMat;
-    private float maxSpeed = 10;
-    private float _decreaseAmount = 15;
 
-    
+
+
     void OnEnable()
     {
         EventManager.MousePressEvent += RunAnimation;
         EventManager.MousePressEvent += PlayPlayerSound;
-        EventManager.MousePressEvent += DecreaseStamine;
+        EventManager.MousePressEvent += StaminaController;
+        
     }
     void OnDisable()
     {
         EventManager.MousePressEvent -= RunAnimation;
         EventManager.MousePressEvent -= PlayPlayerSound;
-        EventManager.MousePressEvent -= DecreaseStamine;
+        EventManager.MousePressEvent -= StaminaController;
     }
 
     void Start()
     {
         _playerMat = gameObject.GetComponentInChildren<SkinnedMeshRenderer>().material;
         Animator = GetComponent<Animator>();
-        Stamine = 5;
+        Stamina = StartStamina;
     }
-    
-    public void RunAnimation()
+
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            DecreaseStamina();
+        }
+    }
+
+    private void RunAnimation()
     {
         Animator.SetBool("isRun",true);
         Animator.SetBool("isIdle",false);
     }  
-    public void IdleAnimation()
+    public static void IdleAnimation()
     {
         Animator.SetBool("isRun",false);
         Animator.SetBool("isIdle",true);
     }
-    
-    public void PlayPlayerSound()
+
+    private void PlayPlayerSound()
     {
         AudioManager.Instance.PlayClipFx(_audioClip,0.5f);
     }
 
-    public void RaiseStamine() // Mouse El çekince
+    public void RaiseStamina() // Mouse El çekince
     {
         StopSweatingAnim();
         Blushing(_playerColor[0],1f);
-        Stamine += Time.deltaTime;
-        Stamine= Mathf.Min(Stamine, maxSpeed);
-        Debug.Log(Stamine);
-    }  
-    public void DecreaseStamine() // Mouse Press
-    {
-        Stamine -= _decreaseAmount * Time.deltaTime;
-        Stamine = Mathf.Max(Stamine, 0);
-
-        if (Stamine <= 2 && Stamine >=0 )
-        {
-            RunSweatingAnim();
-            Blushing(_playerColor[1],1f);
-        }
-
-        if (Stamine <= 0)
-        {
-            Die();
-        }
-        Debug.Log(Stamine);
+        Stamina += Time.deltaTime;
+        Stamina= Mathf.Min(Stamina, MaxStaminaValue);
+        Debug.Log(Stamina);
     }
 
-    public void Die()
+    private void DecreaseStamina() // Mouse Press
+    {
+        Stamina -=Time.deltaTime;
+        Stamina = Mathf.Max(Stamina, 0);
+    }
+
+    private void StaminaController()
+    {
+        if (Stamina <= 2 && Stamina >=0 )
+        {
+            Blushing(_playerColor[1],1f);
+            ShapeShifting();
+            RunSweatingAnim();
+        }
+
+        if (Stamina <= 0)
+        {
+            Die();
+        } 
+        Debug.Log(Stamina);
+    }
+
+    private void Die()
     {
         PlayerParticles[1].Play();
         Destroy(gameObject,0.3f);
+        CanvasUI.Instance.LosePanel();
     }
 
     private void RunSweatingAnim()
     {
+        Debug.Log("Bence giriyorsun");
         PlayerParticles[0].Play();
     }
     
@@ -98,6 +115,12 @@ public class Player : MonoBehaviour
     private void Blushing(Color color,float duration)
     {
         _playerMat.DOColor(color, duration);
+    }
+
+    private void ShapeShifting()
+    {
+        transform.DOScale(.8f,.2f).SetEase(Ease.OutBounce)
+            .OnComplete(() =>transform.DOScale(.7f,.2f));   
     }
 
 }
