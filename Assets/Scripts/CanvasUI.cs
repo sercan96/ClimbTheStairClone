@@ -14,8 +14,8 @@ public class CanvasUI : MonoBehaviour
     public GameObject WinCanvas;
     public GameObject LoseCanvas;
     public GameUI GameUı;
-    
-    
+
+
     void Start()
     {
         Instance = this;
@@ -51,6 +51,7 @@ public class CanvasUI : MonoBehaviour
     public void LosePanel()
     {
         LoseCanvas.SetActive(true);
+        DataManager.Instance.GetCylinder();
     }
 
 

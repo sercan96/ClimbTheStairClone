@@ -7,8 +7,8 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager Instance;
     public Transform StairPos;
-    public GameObject SpawnCylinderObj;
-    public Transform CylinderRange;
+    // public GameObject SpawnCylinderObj;
+    // public Transform CylinderRange;
 
     private bool _state;
     private float _stairPosY;    

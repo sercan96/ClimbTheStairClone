@@ -10,9 +10,7 @@ public class DataManager : MonoBehaviour
     public CanvasUI CanvasUı;
     public static DataManager Instance;
     public int Money = 100;
-
-
-
+    
     void OnEnable()
     {
         EventManager.MousePressEvent += IncreaseMoneyAmount;
@@ -32,7 +30,6 @@ public class DataManager : MonoBehaviour
     {
         Instance = this;
         Debug.Log(Money);
-
     }
 
     void Update()
@@ -72,6 +69,8 @@ public class DataManager : MonoBehaviour
         
         PlayerPrefs.SetFloat("CvsPositionY",Range.TargetCanvas.transform.position.y);
         PlayerPrefs.SetFloat("CvsLocalScaleY",Range.TargetCanvas.transform.localScale.y);
+        
+        PlayerPrefs.Save();
 
     }
 
@@ -80,22 +79,26 @@ public class DataManager : MonoBehaviour
         float cylPositionY =PlayerPrefs.GetFloat("CylPositionY");
         float cylLocalScaleY =PlayerPrefs.GetFloat("CylLocalScaleY");
         
-        float cvsPositionY =PlayerPrefs.GetFloat("CvsPositionY");
-        float cvsLocalScaleY =PlayerPrefs.GetFloat("CvsLocalScaleY");
+        float cvsPositionY = PlayerPrefs.GetFloat("CvsPositionY");
+        float cvsLocalScaleY = PlayerPrefs.GetFloat("CvsLocalScaleY");
 
-        Vector3 targetPos = new Vector3(Range.TargetCanvas.transform.position.x, cylPositionY,
-            Range.TargetCanvas.transform.position.z);
+        Vector3 targetPos = new Vector3(Range.TargetCylinder.transform.position.x, cylPositionY,
+            Range.TargetCylinder.transform.position.z);
         
-        Vector3 targetScale = new Vector3(Range.TargetCanvas.transform.localScale.x, cylLocalScaleY,
-            Range.TargetCanvas.transform.localScale.z);
+        Vector3 targetScale = new Vector3(Range.TargetCylinder.transform.localScale.x, cylLocalScaleY,
+            Range.TargetCylinder.transform.localScale.z);
+
+        Range.TargetCylinder.transform.position = targetPos;
+        Range.TargetCylinder.transform.localScale = targetScale;
         
         Vector3 canvasPos = new Vector3(Range.TargetCanvas.transform.position.x, cvsPositionY,
             Range.TargetCanvas.transform.position.z);
-        
-                
+
         Vector3 canvasScale = new Vector3(Range.TargetCanvas.transform.localScale.x, cvsLocalScaleY,
             Range.TargetCanvas.transform.localScale.z);
         
+        Range.TargetCanvas.transform.position = canvasPos;
+        Range.TargetCanvas.transform.localScale = canvasScale;
     }
     
 

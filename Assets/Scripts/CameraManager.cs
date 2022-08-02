@@ -14,7 +14,6 @@ public class CameraManager : MonoBehaviour
         {
             Move();
         }
-
     }
 
     void Move()

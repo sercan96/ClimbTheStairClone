@@ -103,7 +103,6 @@ public class Player : MonoBehaviour
 
     private void RunSweatingAnim()
     {
-        Debug.Log("Bence giriyorsun");
         PlayerParticles[0].Play();
     }
     

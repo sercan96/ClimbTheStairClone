@@ -12,7 +12,7 @@ public class Range : MonoBehaviour
     public Text TargetCylinderScoreText;
 
     private double _score;
-    private float _riseValueY=0.2f;
+    private float _riseValueY = 0.2f;
     private float _riseMyRange;
 
     void OnEnable()
@@ -28,8 +28,6 @@ public class Range : MonoBehaviour
 
     void Start()
     {
-        // MainCanvas = GameObject.Find("MyRange");
-        // CylinderScoreText = GameObject.Find("MyScore").GetComponent<Text>();
         _score = 100;
     }
 
